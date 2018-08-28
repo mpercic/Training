@@ -1,0 +1,30 @@
+<h1 mat-dialog-title>Ažuriranje vježbe</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <input matInput placeholder="Naziv vježbe" [(ngModel)]="data.name">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-select placeholder="Odaberite vrstu vježbe" [(ngModel)]="data.type">
+      <mat-option value="back">Leđa</mat-option>
+      <mat-option value="leg">Noge</mat-option>
+      <mat-option value="chest">Prsa</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-select placeholder="Odaberite težinu vježbe" [(ngModel)]="data.difficulty">
+      <mat-option value="easy">Jednostavna vježba</mat-option>
+      <mat-option value="medium">Standardna vježba</mat-option>
+      <mat-option value="hard">Zahtjevna vježba</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput placeholder="Poveznica" type="url" [(ngModel)]="data.link">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Odustani</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Spremi</button>
+</div>

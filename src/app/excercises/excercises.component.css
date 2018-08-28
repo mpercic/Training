@@ -1,0 +1,19 @@
+.container{
+  width:75%;
+  margin:0 auto;
+}
+
+mat-card{
+  margin-top:5px;
+}
+
+.spacer{
+  flex:1 1 auto;
+}
+.icon{
+  padding: 0 14px;
+  cursor:pointer;
+}
+mat-toolbar-row{
+  display:flex;
+}

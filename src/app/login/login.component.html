@@ -1,0 +1,29 @@
+<div class="container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        Prijava
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+    <form [formGroup]="control">
+      <mat-form-field>
+        <input matInput formControlName="username" placeholder="Korisničko ime" [autofocus]="true">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput formControlName="password" type="password" placeholder="Lozinka">
+      </mat-form-field>
+    </form>
+      <br><br>
+      <div class="interactions">
+        <mat-hint *ngIf="this.status == '404'" class="notfound">Navedeni korisnik ne postoji!</mat-hint>
+        <mat-hint *ngIf="this.status == '401'" class="unauthorized">Neispravno korisničko ime ili lozinka!</mat-hint>
+        <mat-hint *ngIf="this.status == '200'" class="success">Uspješna prijava!</mat-hint>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="secondary" routerLink="/">Povratak</button>
+      <button mat-raised-button color="secondary" type="submit" [disabled]="this.control.invalid" (click)="this.attemptLogin()">Prijava</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

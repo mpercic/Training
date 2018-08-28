@@ -1,0 +1,16 @@
+  <mat-toolbar-row *ngIf="this.loggedIn != null">
+    <span class="text">Dobrodošli {{this.user}}</span>
+    <mat-icon class="icon" [routerLink]="'profile/'+this.user" matTooltip="Pregled profila">person</mat-icon>
+    <mat-icon class="icon" matTooltip="Postavke">settings</mat-icon>
+    <span class="spacer"></span>
+    <mat-icon class="icon" (click)="logout()" matTooltip="Odjava">power_settings_new</mat-icon>
+  </mat-toolbar-row>
+<div class="wrapper">
+    <div class="center-container">
+      <button mat-raised-button routerLink="login" *ngIf="this.loggedIn == null">Prijava</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button mat-raised-button routerLink="register" *ngIf="this.loggedIn == null">Registracija</button>
+      <button mat-raised-button routerLink="excercises" *ngIf="this.loggedIn != null">Pregled vježbi</button>
+    </div>
+</div>
+

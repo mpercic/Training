@@ -1,0 +1,32 @@
+.wrapper{
+  background:url("../../assets/bg.jpg");
+  background-repeat: no-repeat !important;
+  background-color:#000000;
+  min-height:92vh;
+}
+
+
+.center-container{
+  width:25%;
+  padding-top:15%;
+  margin:0 auto;
+  text-align:center;
+  align-items: center;
+}
+
+.spacer{
+  display: inline-flex;
+  flex: 1 1 auto;
+}
+
+mat-toolbar-row{
+  display:flex;
+}
+
+.icon{
+  padding: 0 14px;
+  cursor: pointer;
+}
+.text{
+  padding: 5px 14px;
+}

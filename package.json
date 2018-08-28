@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -12,17 +12,25 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^6.0.3",
+    "@angular/cdk": "^6.3.0",
     "@angular/common": "^6.0.3",
     "@angular/compiler": "^6.0.3",
     "@angular/core": "^6.0.3",
     "@angular/forms": "^6.0.3",
     "@angular/http": "^6.0.3",
+    "@angular/material": "^6.3.0",
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
-    "core-js": "^2.5.4",
-    "rxjs": "^6.0.0",
-    "zone.js": "^0.8.26"
+    "body-parser": "^1.18.2",
+    "core-js": "^2.4.1",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.0",
+    "mongodb": "^3.0.1",
+    "nodemon": "^1.18.3",
+    "rxjs": "6.2.2",
+    "zone.js": "^0.8.14"
   },
   "devDependencies": {
     "@angular/compiler-cli": "^6.0.3",

@@ -1,0 +1,24 @@
+.container{
+  width:33%;
+  display:block;
+  margin:0 auto;
+}
+mat-form-field{
+  width:75%;
+}
+
+mat-card{
+  text-align: center;
+  height:28vh;
+  margin-top:27vh;
+}
+
+.success{
+  color: #5ec2cb;
+}
+.unauthorized{
+  color: #cb5d35;
+}
+.notfound{
+  color: #e8d04a;
+}

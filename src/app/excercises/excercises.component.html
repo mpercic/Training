@@ -1,0 +1,59 @@
+<!--*ngIf="this.userType != null && this.userType == 'admin'"-->
+<mat-toolbar-row>
+  <mat-icon class="icon" matTooltip="Povratak" routerLink="/">arrow_back</mat-icon>
+  <span class="spacer"></span>
+  <mat-icon class="icon" matTooltip="Dodaj novu vježbu" (click)="this.openDialog()">add</mat-icon>
+</mat-toolbar-row>
+<div class="container">
+  <mat-card>
+    <mat-card-content>
+      <mat-list>
+        <h3 mat-subheader>Vježbe za leđa</h3>
+        <mat-list-item *ngFor="let ex of back; let i = index">
+          <a [href]="ex.link" target="_blank">
+            <h4 mat-line matTooltip="Pritisnite za interaktivni video">{{ex.name}}</h4>
+          </a>
+          <span class="spacer"></span>
+          <mat-icon class="icon" (click)="appendToUserExcercise(i,ex)" matTooltip="Dodaj u vlastite vježbe">add</mat-icon>
+          <mat-icon class="icon" (click)="editDialog(i, ex)" matTooltip="Ažuriraj vježbu">edit</mat-icon>
+          <mat-icon class="icon" (click)="deleteExcercise(i, ex)" matTooltip="Obriši vježbu">close</mat-icon>
+          <mat-divider></mat-divider>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-content>
+      <mat-list>
+        <h3 mat-subheader>Vježbe za prsa</h3>
+        <mat-list-item *ngFor="let ex of chest; let i = index">
+          <a [href]="ex.link" target="_blank">
+          <h4 mat-line matTooltip="Pritisnite za interaktivni video">{{ex.name}}</h4>
+          </a>
+          <span class="spacer"></span>
+          <mat-icon class="icon" (click)="appendToUserExcercise(i,ex)" matTooltip="Dodaj u vlastite vježbe">add</mat-icon>
+          <mat-icon class="icon" (click)="editDialog(i, ex)" matTooltip="Ažuriraj vježbu">edit</mat-icon>
+          <mat-icon class="icon" (click)="deleteExcercise(i, ex)" matTooltip="Obriši vježbu">close</mat-icon>
+          <mat-divider></mat-divider>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-content>
+      <mat-list>
+        <h3 mat-subheader>Vježbe za noge</h3>
+        <mat-list-item *ngFor="let ex of legs; let i = index">
+          <a [href]="ex.link" target="_blank">
+          <h4 mat-line matTooltip="Pritisnite za interaktivni video">{{ex.name}}</h4>
+          </a>
+          <span class="spacer"></span>
+          <mat-icon class="icon" (click)="appendToUserExcercise(i,ex)" matTooltip="Dodaj u vlastite vježbe">add</mat-icon>
+          <mat-icon class="icon" (click)="editDialog(i, ex)" matTooltip="Ažuriraj vježbu">edit</mat-icon>
+          <mat-icon class="icon" (click)="deleteExcercise(i, ex)" matTooltip="Obriši vježbu">close</mat-icon>
+        <mat-divider></mat-divider>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</div>
